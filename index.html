@@ -1,240 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <title>Arunkumar A | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arunkumar A | Professional Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Import Google Fonts Inter and Montserrat for professional look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Reset margin and padding */
-    * {
+    /* Reset */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #101810;
-      color: #e6ffe6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
       line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
+    /* Navigation Bar */
     nav {
       position: sticky;
       top: 0;
-      background: #0b1a0b;
-      border-bottom: 3px solid #00ff4a;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0, 255, 74, 0.4);
-      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e6e8eb;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      font-family: 'Montserrat', sans-serif;
+      z-index: 1000;
     }
 
-    nav ul {
-      max-width: 960px;
+    nav .nav-container {
+      max-width: 1120px;
       margin: 0 auto;
-      list-style: none;
+      padding: 1.2rem 2rem;
       display: flex;
-      justify-content: center;
-      gap: 32px;
-      padding: 16px 12px;
+      justify-content: space-between;
       align-items: center;
     }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
     nav ul li a {
-      font-weight: 500;
-      font-size: 0.95rem;
+      color: #555f66;
+      text-decoration: none;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 8px 16px;
-      border-radius: 8px;
-      display: inline-block;
-      color: #41ff41;
-      transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 1.4px;
+      font-size: 0.875rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover,
     nav ul li a.active {
-      background-color: #00ff4a;
-      color: #101810;
+      color: #0071e3;
+    }
+
+    nav ul li a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #0071e3;
+      border-radius: 2px;
+    }
+
+    nav .contact-btn a {
+      background-color: #0071e3;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 24px;
       font-weight: 700;
-      box-shadow: 0 0 8px #00ff4a;
+      text-transform: none;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.4);
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
     }
 
-    /* Special style for Contact button */
-    nav ul li.contact-btn a {
-      background-color: #00ff4a;
-      color: #101810;
-      font-weight: 700;
-      padding: 8px 22px;
-      border-radius: 30px;
-      box-shadow: 0 0 12px #00ff4a;
-      transition: background-color 0.3s ease, color 0.3s ease;
+    nav .contact-btn a:hover {
+      background-color: #005bb5;
+      box-shadow: 0 6px 20px rgba(0, 91, 181, 0.5);
     }
 
-    nav ul li.contact-btn a:hover {
-      background-color: #28d428;
-      color: #e6ffe6;
-      box-shadow: 0 0 20px #28d428;
-    }
-
+    /* Header Section */
     header {
-      background: linear-gradient(90deg, #015a25 60%, #191919 100%);
-      color: #e6ffe6;
-      padding: 56px 0 36px;
+      max-width: 800px;
+      margin: 3.5rem auto 3rem;
       text-align: center;
-      border-bottom: 4px solid #00ff4a;
-      font-family: 'Poppins', sans-serif;
+      padding: 0 1rem;
     }
 
     header img {
-      width: 148px;
-      height: 148px;
-      border-radius: 50%;
-      border: 4px solid #59ff59;
-      box-shadow: 0 2px 12px #0a310a;
-      margin-bottom: 18px;
+      width: 160px;
+      height: 200px;
       object-fit: cover;
+      border-radius: 30% / 15%; /* Oval shape */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 1.6rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 6px solid #e3e8f0;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
     }
 
     header h1 {
+      font-family: 'Montserrat', sans-serif;
       font-size: 2.8rem;
+      color: #0f1117;
       font-weight: 700;
-      margin-bottom: 6px;
-      text-shadow: 0 3px 8px #0a310a;
+      margin-bottom: 0.5rem;
     }
 
     header p {
+      font-size: 1.15rem;
+      color: #494f57;
       font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 1.05px;
-      color: #c9ffc9;
-      text-shadow: 0 1px 4px #0a310a;
+      letter-spacing: 0.7px;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 36px auto 48px;
-      background: #181f18;
+    /* Main container for all sections */
+    main {
+      max-width: 1000px;
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    /* Section Container style - card like */
+    section {
+      background-color: white;
+      padding: 2rem 2.5rem;
       border-radius: 16px;
-      box-shadow: 0 3px 18px rgba(1, 90, 37, 0.22);
-      padding: 36px 40px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      color: #222;
+      font-size: 1rem;
     }
 
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #59ff59;
-      margin-bottom: 18px;
-      text-shadow: 0 2px 14px #0a310a;
-      font-size: 1.9rem;
-      border-bottom: 2px solid #00ff4a;
-      padding-bottom: 6px;
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0f1117;
+      border-bottom: 2.5px solid #0071e3;
+      padding-bottom: 0.3rem;
       max-width: max-content;
-      margin-left: 0;
     }
 
+    section p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: #4a4f55;
+    }
+
+    /* Lists visually distinct */
     ul {
-      padding-left: 22px;
-      margin-bottom: 24px;
+      margin-top: 1rem;
+      padding-left: 1.25rem;
     }
 
     ul li {
-      margin-bottom: 12px;
+      margin-bottom: 0.75rem;
       font-size: 1.05rem;
-      letter-spacing: 0.5px;
+      color: #4a4f55;
+      line-height: 1.5;
+      list-style-type: disc;
     }
 
+    /* Skills badges style */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
+      gap: 1rem;
+      margin-top: 1.2rem;
     }
 
     .skill-badge {
-      background: #015a25;
-      color: #caffc5;
-      padding: 10px 22px;
+      background-color: #e3e8f0;
+      color: #0f1117;
       border-radius: 24px;
-      font-size: 1rem;
-      display: inline-block;
-      border: 1.8px solid #59ff59;
-      box-shadow: 0 2px 10px #031d09;
-      cursor: default;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.6rem 1.25rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       user-select: none;
+      cursor: default;
       transition: background-color 0.3s ease;
     }
 
     .skill-badge:hover {
-      background-color: #1d7b2b;
+      background-color: #ade1ff;
+      color: #004b8d;
     }
 
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      margin-bottom: 28px;
-      letter-spacing: 0.4px;
-    }
-
-    /* Contact Section Styling */
+    /* Contact details styling */
     #contact p {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
       font-weight: 500;
-      letter-spacing: 0.5px;
+      color: #4a4f55;
     }
 
     #contact a,
     #contact .phone {
-      color: #41ff41;
-      font-weight: 700;
+      font-weight: 600;
+      color: #0071e3;
       text-decoration: none;
       transition: color 0.3s ease;
       cursor: pointer;
     }
 
-    #contact a:hover {
-      color: #20bb20;
-      text-decoration: underline;
-    }
-
+    #contact a:hover,
     #contact .phone:hover {
-      color: #20bb20;
+      color: #004b8d;
       text-decoration: underline;
     }
 
-    /* Footer Styling */
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 28px 0;
-      color: #cccccc;
-      background: #015a25;
-      border-top: 3px solid #191919;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.5px;
-    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-    /* Responsive */
-    @media (max-width: 760px) {
       nav ul {
+        gap: 1.25rem;
         flex-wrap: wrap;
-        gap: 16px;
-        padding: 12px 10px;
         justify-content: center;
       }
 
-      .container {
-        padding: 24px 18px;
-        margin: 24px auto 42px;
-      }
-
-      h2 {
-        font-size: 1.6rem;
+      section {
+        padding: 1.5rem 1.8rem;
       }
 
       header h1 {
@@ -245,38 +271,43 @@
         font-size: 1rem;
       }
 
-      .skill-badge {
-        font-size: 0.9rem;
-        padding: 8px 18px;
+      .skills {
+        justify-content: center;
       }
     }
   </style>
 </head>
-
 <body>
   <nav>
-    <ul>
-      <li><a href="#about" class="active">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#sports">Football</a></li>
-      <li class="contact-btn"><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="logo" aria-label="Arunkumar A logo">
+        <a href="#about" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.3rem; color: #0071e3; text-decoration: none;">
+          Arunkumar A
+        </a>
+      </div>
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#sports">Football</a></li>
+        <li class="contact-btn"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <header>
-    <img src="Photo of arunkumar a.html.png" alt="Photo of Arunkumar A" />
+    <img src="Photo of arunkumar a.html.png" alt="Portrait of Arunkumar A" />
     <h1>Arunkumar A</h1>
     <p>MBA (Marketing & Finance) | HR & Admin Executive | Football State/National Player</p>
   </header>
 
-  <div class="container">
+  <main>
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an MBA graduate specializing in Marketing and Finance, currently working as an HR & Admin Executive at Auriseg Consulting Private Limited. My background combines a strong academic foundation, practical certifications in digital marketing, and a passion for sports, having represented state, national, and university level football tournaments during my schooling and college years.
+        I am a dedicated MBA graduate with dual specialization in Marketing and Finance. Currently, I serve as an HR & Admin Executive at Auriseg Consulting Private Limited, where I leverage my academic insight and professional skills to drive organizational success. My diverse background encompasses digital marketing certifications and a committed sportsmanship, having represented state, national, and university football teams, reflecting a strong discipline and team spirit.
       </p>
     </section>
 
@@ -284,7 +315,7 @@
       <h2>Education</h2>
       <ul>
         <li>Schooling: ONGC Public School</li>
-        <li>MBA (Marketing & Finance)</li>
+        <li>MBA in Marketing & Finance</li>
       </ul>
     </section>
 
@@ -317,43 +348,50 @@
     <section id="sports">
       <h2>Football Achievements</h2>
       <ul>
-        <li>Represented State, National, and University level tournaments (School & College)</li>
+        <li>Represented State level football tournaments during schooling years.</li>
+        <li>Participated in National level football championships.</li>
+        <li>Played at University level football competitions.</li>
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:arunsr2603@gmail.com">arunsr2603@gmail.com</a></p>
-      <p>Phone: <span class="phone">+91 9080183128</span></p>
+      <p>Phone: <a href="tel:+919080183128" class="phone">+91 9080183128</a></p>
     </section>
-  </div>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     &copy; 2025 Arunkumar A. Portfolio Site.
-  </div>
+  </footer>
 
   <script>
-    // Highlight active nav items based on scroll position
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
+    // Smooth scroll and active nav link highlight
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('main section');
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 80;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
+    function changeActiveLink() {
+      let index = sections.length;
+      while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLinks[index].classList.add('active');
+    }
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === current) {
-          link.classList.add("active");
-        }
+    changeActiveLink();
+    window.addEventListener('scroll', changeActiveLink);
+
+    // Smooth scroll on clicking nav links
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetSection.offsetTop - 60,
+          behavior: 'smooth'
+        });
       });
     });
   </script>
 </body>
-
 </html>

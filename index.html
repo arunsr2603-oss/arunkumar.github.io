@@ -1,206 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Arunkumar A | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet" />
+
   <style>
-<nav>
-  <ul>
-    <li><a href="#about" class="active">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#sports">Football</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-    nav {
-  position: sticky;
-  top: 0;
-  background: #0b1a0b;
-  border-bottom: 3px solid #00ff4a;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 255, 74, 0.3);
-}
-
-nav ul {
-  max-width: 900px;
-  margin: 0 auto;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-  padding: 14px 10px;
-}
-
-nav ul li a {
-  font-weight: 500;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  color: #41ff41;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #00ff4a;
-  color: #101810;
-  font-weight: 700;
-}
-
-
-    body {
-      <body>
-  <nav>
-    ...
-  </nav>
-
-  <header>
-    ...
-  </header>
-
-      font-family: timesnewroman, sans-serif;
-      background: #101810; /* deep black-green */
+    /* Reset margin and padding */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      color: #e6ffe6;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #101810;
+      color: #e6ffe6;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #0b1a0b;
+      border-bottom: 3px solid #00ff4a;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0, 255, 74, 0.4);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul {
+      max-width: 960px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 16px 12px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      color: #41ff41;
+      transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #00ff4a;
+      color: #101810;
+      font-weight: 700;
+      box-shadow: 0 0 8px #00ff4a;
+    }
+
+    /* Special style for Contact button */
+    nav ul li.contact-btn a {
+      background-color: #00ff4a;
+      color: #101810;
+      font-weight: 700;
+      padding: 8px 22px;
+      border-radius: 30px;
+      box-shadow: 0 0 12px #00ff4a;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li.contact-btn a:hover {
+      background-color: #28d428;
+      color: #e6ffe6;
+      box-shadow: 0 0 20px #28d428;
+    }
+
     header {
       background: linear-gradient(90deg, #015a25 60%, #191919 100%);
       color: #e6ffe6;
-      padding: 48px 0 32px;
+      padding: 56px 0 36px;
       text-align: center;
       border-bottom: 4px solid #00ff4a;
+      font-family: 'Poppins', sans-serif;
     }
+
+    header img {
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      border: 4px solid #59ff59;
+      box-shadow: 0 2px 12px #0a310a;
+      margin-bottom: 18px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-shadow: 0 3px 8px #0a310a;
+    }
+
+    header p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1.05px;
+      color: #c9ffc9;
+      text-shadow: 0 1px 4px #0a310a;
+    }
+
     .container {
-      max-width: 900px;
-      margin: 32px auto;
+      max-width: 960px;
+      margin: 36px auto 48px;
       background: #181f18;
-      border-radius: 12px;
-      box-shadow: 0 3px 16px rgba(1, 90, 37, 0.18);
-      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 3px 18px rgba(1, 90, 37, 0.22);
+      padding: 36px 40px;
     }
+
     h2 {
+      font-family: 'Poppins', sans-serif;
       color: #59ff59;
-      margin-bottom: 12px;
-      text-shadow: 0 2px 12px #0a310a;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 14px #0a310a;
+      font-size: 1.9rem;
+      border-bottom: 2px solid #00ff4a;
+      padding-bottom: 6px;
+      max-width: max-content;
+      margin-left: 0;
     }
-    ul { padding-left: 20px; }
+
+    ul {
+      padding-left: 22px;
+      margin-bottom: 24px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+    }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
+
     .skill-badge {
       background: #015a25;
       color: #caffc5;
-      padding: 8px 16px;
+      padding: 10px 22px;
       border-radius: 24px;
-      font-size: 0.95em;
+      font-size: 1rem;
       display: inline-block;
-      margin-bottom: 4px;
-      border: 1px solid #59ff59;
-      box-shadow: 0 2px 8px #031d09;
+      border: 1.8px solid #59ff59;
+      box-shadow: 0 2px 10px #031d09;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease;
     }
-    .footer {
-      text-align: center;
-      font-size: 0.9em;
-      padding: 30px 0;
-      color: #cccccc;
-      background: #015a25;
-      border-top: 3px solid #191919;
+
+    .skill-badge:hover {
+      background-color: #1d7b2b;
     }
-    a {
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      letter-spacing: 0.4px;
+    }
+
+    /* Contact Section Styling */
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    #contact a,
+    #contact .phone {
       color: #41ff41;
+      font-weight: 700;
       text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
     }
-    a:hover {
+
+    #contact a:hover {
       color: #20bb20;
       text-decoration: underline;
     }
-    @media(max-width:700px){
-      .container {padding: 12px;}
+
+    #contact .phone:hover {
+      color: #20bb20;
+      text-decoration: underline;
+    }
+
+    /* Footer Styling */
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 28px 0;
+      color: #cccccc;
+      background: #015a25;
+      border-top: 3px solid #191919;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 760px) {
+      nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 12px 10px;
+        justify-content: center;
+      }
+
+      .container {
+        padding: 24px 18px;
+        margin: 24px auto 42px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .skill-badge {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header>
-  <img src="Photo of arunkumar a.html.png" alt="Photo of arunkumar a.html.png" style="width:140px; height:140px; border-radius:50%; border:4px solid #59ff59; box-shadow:0 2px 12px #0a310a; margin-bottom: 14px;">
-<h1>Arunkumar A</h1>
-  <p>MBA (Marketing & Finance) | HR & Admin Executive | Football State/National Player</p>
-</header>
-<div class="container">
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an MBA graduate specializing in Marketing and Finance, currently working as an HR & Admin Executive at Auriseg Consulting Private Limited. My background combines a strong academic foundation, practical certifications in digital marketing, and a passion for sports, having represented state, national, and university level football tournaments during my schooling and college years.
-    </p>
-  </section>
-  <section>
-    <h2>Education</h2>
+  <nav>
     <ul>
-      <li>Schooling: ONGC Public School</li>
-      <li>MBA (Marketing & Finance)</li>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#sports">Football</a></li>
+      <li class="contact-btn"><a href="#contact">Contact</a></li>
     </ul>
-  </section>
-  <section>
-    <h2>Professional Experience</h2>
-    <ul>
-      <li>HR & Admin Executive, Auriseg Consulting Private Limited</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Digital Marketing Certifications</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span class="skill-badge">Canva</span>
-      <span class="skill-badge">WordPress</span>
-      <span class="skill-badge">Excel</span>
-      <span class="skill-badge">Word</span>
-      <span class="skill-badge">PowerPoint</span>
-      <span class="skill-badge">Digital Marketing</span>
-    </div>
-  </section>
-  <section>
-    <h2>Football Achievements</h2>
-    <ul>
-      <li>Represented State, National, and University level tournaments (School & College)</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Contact</h2>
-    <p>Reach out at: <b>arunsr2603@gmail.com</b></p>
-  </section>
-</div>
-<div class="footer">
-  &copy; 2025 Your Name. Portfolio Site.
-</div>
+  </nav>
+
+  <header>
+    <img src="Photo of arunkumar a.html.png" alt="Photo of Arunkumar A" />
+    <h1>Arunkumar A</h1>
+    <p>MBA (Marketing & Finance) | HR & Admin Executive | Football State/National Player</p>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am an MBA graduate specializing in Marketing and Finance, currently working as an HR & Admin Executive at Auriseg Consulting Private Limited. My background combines a strong academic foundation, practical certifications in digital marketing, and a passion for sports, having represented state, national, and university level football tournaments during my schooling and college years.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Schooling: ONGC Public School</li>
+        <li>MBA (Marketing & Finance)</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>HR & Admin Executive, Auriseg Consulting Private Limited</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Digital Marketing Certifications</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill-badge">Canva</span>
+        <span class="skill-badge">WordPress</span>
+        <span class="skill-badge">Excel</span>
+        <span class="skill-badge">Word</span>
+        <span class="skill-badge">PowerPoint</span>
+        <span class="skill-badge">Digital Marketing</span>
+      </div>
+    </section>
+
+    <section id="sports">
+      <h2>Football Achievements</h2>
+      <ul>
+        <li>Represented State, National, and University level tournaments (School & College)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:arunsr2603@gmail.com">arunsr2603@gmail.com</a></p>
+      <p>Phone: <span class="phone">+91 9080183128</span></p>
+    </section>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Arunkumar A. Portfolio Site.
+  </div>
+
+  <script>
+    // Highlight active nav items based on scroll position
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

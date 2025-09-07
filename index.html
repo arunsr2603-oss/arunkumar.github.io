@@ -5,7 +5,6 @@
   <title>Arunkumar A | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    <!-- Add this directly after the opening <body> tag -->
 <nav>
   <ul>
     <li><a href="#about" class="active">About</a></li>
@@ -17,8 +16,55 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+    nav {
+  position: sticky;
+  top: 0;
+  background: #0b1a0b;
+  border-bottom: 3px solid #00ff4a;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 255, 74, 0.3);
+}
+
+nav ul {
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 14px 10px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  color: #41ff41;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #00ff4a;
+  color: #101810;
+  font-weight: 700;
+}
+
 
     body {
+      <body>
+  <nav>
+    ...
+  </nav>
+
+  <header>
+    ...
+  </header>
+
       font-family: timesnewroman, sans-serif;
       background: #101810; /* deep black-green */
       margin: 0;
@@ -143,6 +189,7 @@
 </div>
 </body>
 </html>
+
 
 
 
